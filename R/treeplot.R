@@ -567,16 +567,17 @@ treeplot.compareClusterResult <-  function(x,
             ggtreeExtra::geom_fruit(data = dotdata, geom = geom_point,
                        mapping = aes_string(x = "Cluster", y = "Description", 
                                      size = "Count", color = color),
+		       offset = 0.6,
                        # pwidth = 0.5, offset = -0.2,
                        pwidth = 0.06*ncol(ID_Cluster_mat),
-                       axis.params = list(axis = "x", text.size = 5, line.alpha = 0, text.angle = colnames_angle, hjust=0.5, vjust=1)) +
+		       grid.params = list(vline=TRUE)
+                       axis.params = list(axis = "x", text.size = 2.5, line.alpha = 0, text.angle = colnames_angle, hjust=0.5, vjust=1)) +
             # scale_colour_continuous(trans = "log10", name = color) + 
             set_enrichplot_color(trans = "log10", name = color)
             
     }
-    p + ggtree::hexpand(ratio = hexpand)
+    p <- p + ggtree::hexpand(ratio = hexpand)
     p + ggtree::vexpand(ratio = 0.2) # More room for xaxis labels
-
 }
 
 
