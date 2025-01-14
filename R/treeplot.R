@@ -577,7 +577,7 @@ treeplot.compareClusterResult <-  function(x,
             
     }
     p <- p + ggtree::hexpand(ratio = hexpand)
-    p + ggtree::vexpand(ratio = 0.2) # More room for xaxis labels
+    p + ggtree::vexpand(ratio = 0.2, direction = -1) # More room for xaxis labels (-1 direction for bottom)
 }
 
 
