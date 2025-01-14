@@ -576,8 +576,8 @@ treeplot.compareClusterResult <-  function(x,
             set_enrichplot_color(trans = "log10", name = color)
             
     }
-    p <- p + ggtree::hexpand(ratio = hexpand)
-    p + ggtree::vexpand(ratio = 0.2, direction = -1) # More room for xaxis labels (-1 direction for bottom)
+    # p <- p + ggtree::hexpand(ratio = hexpand)
+    p + ggtree::vexpand(ratio = 0.1, direction = -1) # More room for xaxis labels (-1 direction for bottom)
 }
 
 
