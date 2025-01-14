@@ -568,8 +568,8 @@ treeplot.compareClusterResult <-  function(x,
                        mapping = aes_string(x = "Cluster", y = "Description", 
                                      size = "Count", color = color),
                        # pwidth = 0.5, offset = -0.2,
-                       pwidth = 0.09*ncol(ID_Cluster_mat),
-                       axis.params = list(axis = "x", text.size = 5, line.alpha = 0, text.angle = colnames_angle, hjust=1)) +
+                       pwidth = 0.06*ncol(ID_Cluster_mat),
+                       axis.params = list(axis = "x", text.size = 1.5, line.alpha = 0, text.angle = colnames_angle, hjust=0.5, vjust=1)) +
             # scale_colour_continuous(trans = "log10", name = color) + 
             set_enrichplot_color(trans = "log10", name = color)
             
