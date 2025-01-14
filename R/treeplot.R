@@ -569,14 +569,14 @@ treeplot.compareClusterResult <-  function(x,
                         size = "Count", color = color),
                     # pwidth = 0.5, offset = -0.2,
                     pwidth = 0.06*ncol(ID_Cluster_mat),
-		            grid.params = list(vline=TRUE),
+		    # grid.params = list(vline=TRUE),
                     axis.params = list(axis = "x", text.size = 2.5, line.alpha = 0, text.angle = colnames_angle, hjust=0.5, vjust=1)) +
             # scale_colour_continuous(trans = "log10", name = color) + 
             set_enrichplot_color(trans = "log10", name = color)
             
     }
-    # p <- p + ggtree::hexpand(ratio = hexpand)
-    p + ggtree::vexpand(ratio = 0.1, direction = 1) # More room for xaxis labels (-1 direction for bottom)
+   p + ggtree::hexpand(ratio = hexpand)
+    # p + ggtree::vexpand(ratio = 0.1, direction = 1) # More room for xaxis labels (-1 direction for bottom)
 }
 
 
