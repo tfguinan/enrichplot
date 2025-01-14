@@ -565,13 +565,12 @@ treeplot.compareClusterResult <-  function(x,
         check_installed("ggtreeExtra", "for `treeplot()` with ` clusterPanel = 'dotplot'`.")
 	    p <- p + ggnewscale::new_scale_colour() + 
             ggtreeExtra::geom_fruit(data = dotdata, geom = geom_point,
-                       mapping = aes_string(x = "Cluster", y = "Description", 
-                                     size = "Count", color = color),
-		       offset = 0.6,
-                       # pwidth = 0.5, offset = -0.2,
-                       pwidth = 0.06*ncol(ID_Cluster_mat),
-		       grid.params = list(vline=TRUE),
-                       axis.params = list(axis = "x", text.size = 2.5, line.alpha = 0, text.angle = colnames_angle, hjust=0.5, vjust=1)) +
+                    mapping = aes_string(x = "Cluster", y = "Description", 
+                        size = "Count", color = color),
+                    # pwidth = 0.5, offset = -0.2,
+                    pwidth = 0.06*ncol(ID_Cluster_mat),
+		            grid.params = list(vline=TRUE),
+                    axis.params = list(axis = "x", text.size = 2.5, line.alpha = 0, text.angle = colnames_angle, hjust=0.5, vjust=1)) +
             # scale_colour_continuous(trans = "log10", name = color) + 
             set_enrichplot_color(trans = "log10", name = color)
             
